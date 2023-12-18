@@ -3,11 +3,11 @@
   <title>kelthezad🥝</title>
   
   
-  <link href="https://www.fomal.cc/atom.xml" rel="self"/>
+  <link href="https://www.dyzzy.asia/atom.xml" rel="self"/>
   
-  <link href="https://www.fomal.cc/"/>
-  <updated>2023-12-13T13:25:53.700Z</updated>
-  <id>https://www.fomal.cc/</id>
+  <link href="https://www.dyzzy.asia/"/>
+  <updated>2023-12-18T06:03:41.290Z</updated>
+  <id>https://www.dyzzy.asia/</id>
   
   <author>
     <name>kelthezad🥝</name>
@@ -18,10 +18,10 @@
   
   <entry>
     <title>基于家宽服务器的hexo博客搭建</title>
-    <link href="https://www.fomal.cc/posts/a3ce0d8f.html"/>
-    <id>https://www.fomal.cc/posts/a3ce0d8f.html</id>
+    <link href="https://www.dyzzy.asia/posts/a3ce0d8f.html"/>
+    <id>https://www.dyzzy.asia/posts/a3ce0d8f.html</id>
     <published>2023-12-13T09:19:32.000Z</published>
-    <updated>2023-12-13T13:25:53.700Z</updated>
+    <updated>2023-12-18T06:03:41.290Z</updated>
     
     <content type="html"><![CDATA[<h1>基于家宽服务器的hexo博客搭建</h1><p>博主家宽服务器配置：</p><h2 id="一、搭建步骤">一、搭建步骤</h2><h3 id="1-配置服务器环境">1.配置服务器环境</h3><ul><li>服务器安装nginx： npm install -y nginx</li><li>启动服务器:</li></ul><figure class="highlight nsis"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="params">system</span>ctl start nginx</span><br><span class="line"><span class="params">system</span>ctl enable nginx</span><br></pre></td></tr></table></figure><h3 id="2-negix配置">2.negix配置</h3><p>在/etc/nginx/目录下创建一个文件夹vhost:</p><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">cd</span> /etc/nginx</span><br><span class="line"><span class="built_in">mkdir</span> vhost</span><br><span class="line"><span class="keyword">cd</span> vhost</span><br><span class="line"><span class="keyword">vim</span> blog.<span class="keyword">conf</span></span><br></pre></td></tr></table></figure><p>编辑blog.conf文件内容：</p><figure class="highlight abnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">server&#123;</span><br><span class="line">    listen    <span class="number">80</span><span class="comment">;</span></span><br><span class="line">    root /home/www/website<span class="comment">;这里填博客目录存放的地址</span></span><br><span class="line">    server_name 这里填域名如(www.baidu.com) 如果暂时没有域名就填阿里云的公网ip，以后有了再改回来<span class="comment">;</span></span><br><span class="line">    location /&#123;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>打开/etc/nginx/目录下的nginx.conf文件:</p><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo <span class="keyword">vim</span> nginx.<span class="keyword">conf</span></span><br></pre></td></tr></table></figure><p>在这里添加：</p><figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">include</span> <span class="regexp">/etc/</span>nginx<span class="regexp">/vhost/</span>*.conf;</span><br></pre></td></tr></table></figure><p><img src="https://img-blog.csdnimg.cn/8a0440c99e6c44ddb032647adefed2c0.png" alt="img"></p><p>按i键插入，之后按esc键，输入：</p><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">: <span class="keyword">wq</span></span><br></pre></td></tr></table></figure><p>保存并退出 在刚才我们自己写的blog.conf配置文件中root的路径相应路径建立博客的目录：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /home</span><br><span class="line"><span class="built_in">mkdir</span> www</span><br><span class="line"><span class="built_in">cd</span> www</span><br><span class="line"><span class="built_in">mkdir</span> website</span><br></pre></td></tr></table></figure><p>重启服务器：</p><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">sudo nginx -s reload</span></span><br></pre></td></tr></table></figure><h3 id="3-git及node-js安装">3.git及node.js安装</h3><ul><li>安装node.js安装</li></ul><figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">curl</span> -<span class="built_in">sL</span> https:<span class="comment">//rpm.nodesource.com/setup_10.x | bash -</span></span><br><span class="line"><span class="symbol">yum</span> install -y nodejs</span><br></pre></td></tr></table></figure><p>安装完成后执行 node -v 和 npm -v 如果打印版本号则安装成功</p><ul><li>安装Git及配置仓库</li></ul><p>这一部分主要目的是让我们个人的电脑可以通过ssh方式连接到云服务器，然后我们就可以通过命令行方式将我们的博客pull到服务器上。操作如下：</p><p>安装git:</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install git</span><br></pre></td></tr></table></figure><p>配置git用户：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">adduser git</span><br></pre></td></tr></table></figure><p>修改用户权限：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">chmod</span> 740 /etc/sudoers</span><br></pre></td></tr></table></figure><p>修改：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vim /etc/sudoers</span><br></pre></td></tr></table></figure><p>找到此位置添加下面这句话 git ALL=(ALL) ALL</p><p><img src="https://img-blog.csdnimg.cn/5ac581aea6944966adbec3fa09c7b741.png" alt="img"></p><p>保存退出后 将sudoers文件权限改回原样</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">chmod</span> 400 /etc/sudoers</span><br></pre></td></tr></table></figure><p>设置git用户的密码:</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo passwd git</span><br></pre></td></tr></table></figure><p>切换到git用户，然后在~目录下创建.ssh文件夹:</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">su git</span><br><span class="line"><span class="built_in">cd</span> ~</span><br><span class="line"><span class="built_in">mkdir</span> .ssh</span><br><span class="line"><span class="built_in">cd</span> .ssh</span><br></pre></td></tr></table></figure><p>生成公钥密钥文件:</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen</span><br></pre></td></tr></table></figure><p>这里直接三连enter键，直接跳过</p><p>此时在目录下就会有两个文件，分别是</p><blockquote><p>id_rsa</p><p>id_rsa.pub</p></blockquote><p><img src="https://img-blog.csdnimg.cn/b9e9b3634d414fd39eac86695f25a882.png" alt="在这里插入图片描述"></p><p>其中 id_rsa.pub 就是公钥文件 我们复制一份:</p><figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">cp</span> id_rsa.pub authorized_keys</span><br></pre></td></tr></table></figure><p><img src="https://img-blog.csdnimg.cn/2fb7505e9d85497c858cb46a23d1302c.png" alt="在这里插入图片描述"></p><p>这样目录下就会有一个authorized_keys文件，它和id_rsa.pub一模一样。 最后我们修改它的权限:</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">chmod</span> 600 ~/.ssh/authorized_keys</span><br><span class="line"><span class="built_in">chmod</span> 700 ~/.ssh</span><br></pre></td></tr></table></figure><p>然后我们在<strong>自己的电脑上自己的电脑上自己的电脑上（重要的事说三遍）</strong>，打开cmd，使用ssh方式连接我们的云服务器:</p><figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -v <span class="symbol">git@</span>服务器公网ip</span><br></pre></td></tr></table></figure>]]></content>
     
@@ -38,21 +38,21 @@
     
     
     
-    <category term="Linux" scheme="https://www.fomal.cc/categories/Linux/"/>
+    <category term="Linux" scheme="https://www.dyzzy.asia/categories/Linux/"/>
     
     
-    <category term="frpc" scheme="https://www.fomal.cc/tags/frpc/"/>
+    <category term="frpc" scheme="https://www.dyzzy.asia/tags/frpc/"/>
     
-    <category term="Linux" scheme="https://www.fomal.cc/tags/Linux/"/>
+    <category term="Linux" scheme="https://www.dyzzy.asia/tags/Linux/"/>
     
   </entry>
   
   <entry>
     <title>Frpc加入systemd服务开机自启</title>
-    <link href="https://www.fomal.cc/posts/a70faca0.html"/>
-    <id>https://www.fomal.cc/posts/a70faca0.html</id>
+    <link href="https://www.dyzzy.asia/posts/a70faca0.html"/>
+    <id>https://www.dyzzy.asia/posts/a70faca0.html</id>
     <published>2023-12-12T09:38:43.000Z</published>
-    <updated>2023-12-18T05:49:05.054Z</updated>
+    <updated>2023-12-18T06:03:41.274Z</updated>
     
     <content type="html"><![CDATA[<h1>systemd服务</h1><h2 id="1、Linux服务器端安装systemd。">1、Linux服务器端安装systemd。</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># yum</span></span><br><span class="line">yum install systemd</span><br><span class="line"><span class="comment"># apt</span></span><br><span class="line">apt install systemd </span><br><span class="line"><span class="comment"># 启动frp</span></span><br><span class="line">systemctl start frpc</span><br><span class="line"><span class="comment"># frp跟随Linux自启</span></span><br><span class="line">systemctl <span class="built_in">enable</span> frpc</span><br><span class="line"><span class="comment"># 停止frp</span></span><br><span class="line">systemctl stop frpc</span><br><span class="line"><span class="comment"># 重启frp</span></span><br><span class="line">systemctl restart frpc</span><br><span class="line"><span class="comment"># 查看frp状态</span></span><br><span class="line">systemctl status frpc</span><br></pre></td></tr></table></figure><p>:::warning<br><strong>修改systemd服务配置文件后，需要重新加载配置文件</strong><br>:::</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 重新启动服务</span></span><br><span class="line">systemctl restart 服务名</span><br><span class="line"><span class="comment"># 重新加载配置文件：不会中断服务，但是新的配置文件需要支持热加载</span></span><br><span class="line">systemctl reload 服务名</span><br><span class="line"><span class="comment"># 重新加载配置文件：不会中断服务，重新加载所有配置文件</span></span><br><span class="line">systemctl deamon-reload 服务名 </span><br></pre></td></tr></table></figure><h2 id="2、创建frpc-service文件">2、创建<code>frpc.service</code>文件</h2><blockquote><p>systemd配置目录/usr/lib/systemd/system</p></blockquote><h2 id="3、编辑frps-service文件">3、编辑frps.service文件</h2><figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">[Unit]</span></span><br><span class="line"><span class="comment"># 服务名称，可自定义</span></span><br><span class="line"><span class="attr">Description</span> = frp server</span><br><span class="line"><span class="attr">After</span> = network.target syslog.target</span><br><span class="line"><span class="attr">Wants</span> = network.target</span><br><span class="line"></span><br><span class="line"><span class="section">[Service]</span></span><br><span class="line"><span class="attr">Type</span> = simple</span><br><span class="line"><span class="comment"># 启动frps的命令，需修改为您的frps的安装路径</span></span><br><span class="line"><span class="attr">ExecStart</span> = /path/to/frpc -c /path/to/frpc.ini</span><br><span class="line"></span><br><span class="line"><span class="section">[Install]</span></span><br><span class="line"><span class="attr">WantedBy</span> = multi-user.target</span><br></pre></td></tr></table></figure>]]></content>
     
@@ -66,21 +66,21 @@
     
     
     
-    <category term="Linux" scheme="https://www.fomal.cc/categories/Linux/"/>
+    <category term="Linux" scheme="https://www.dyzzy.asia/categories/Linux/"/>
     
     
-    <category term="frpc" scheme="https://www.fomal.cc/tags/frpc/"/>
+    <category term="frpc" scheme="https://www.dyzzy.asia/tags/frpc/"/>
     
-    <category term="Linux" scheme="https://www.fomal.cc/tags/Linux/"/>
+    <category term="Linux" scheme="https://www.dyzzy.asia/tags/Linux/"/>
     
   </entry>
   
   <entry>
     <title>Hellow Word！</title>
-    <link href="https://www.fomal.cc/posts/d2be335e.html"/>
-    <id>https://www.fomal.cc/posts/d2be335e.html</id>
+    <link href="https://www.dyzzy.asia/posts/d2be335e.html"/>
+    <id>https://www.dyzzy.asia/posts/d2be335e.html</id>
     <published>2023-08-06T09:19:32.000Z</published>
-    <updated>2023-12-18T06:03:25.030Z</updated>
+    <updated>2023-12-18T06:03:41.274Z</updated>
     
     <content type="html"><![CDATA[<p>Custom Container Examples.<br>Since version 1.5.0, Aurora added custom containers including tip, warning, danger and details.</p><p>自从版本 1.5.0，Aurora 添加了与 VuePress 一样的自定义容器, 包括 提示 (tip)、注意 (warning)、特别注意 (danger) 和 隐藏内容 (details)</p><p>!&gt; 标识警告的引用，常用于标识警告信息说着特殊说明</p>  <!-- tabs:start --><h4 id="English">** English **</h4><p>Hello!</p><h4 id="French">** French **</h4><p>Bonjour!</p><h4 id="Italian">** Italian **</h4><p>Ciao!</p>  <!-- tabs:end --><blockquote><p>[!TIP]<br>我是一个TIP</p></blockquote><blockquote><p>[!NOTE] 我是一个NOTE</p></blockquote><blockquote><p>[!WARNING]<br>我是一个WARNING</p></blockquote><blockquote><p>[!DANGER]<br>我是一个DANGER</p></blockquote><p>Block quote<br>normal quote block.</p><blockquote><p>normal quote block.<br>Custom Containers<br>Tip Container<br>提示</p></blockquote><p>Normal Tips Container</p><p>:::tip<br>Normal Tips Container</p><p>Custom header</p><p>Custom header<br>tips content<br>tips new line<br>Markdown</p><p>:::tip Custom header</p><p>Custom header</p><ul><li>tips content</li><li>tips new line</li></ul><p>:::</p><p>Warning Container<br>注意</p><p>Warning!!!</p><p>Markdown</p><p>:::warning<br>Warning!!!<br>:::</p><p>Warning World</p><p>Warning<br>Warning!!!</p><p>Markdown<br>:::warning Warning World<br><strong>Warning!!!</strong><br>:::<br>Danger Container<br>特别注意</p><p>Danger!!!</p><p>Markdown</p><p>:::danger<br>Danger!!!<br>:::</p><p>Detail container<br>Click to see more<br>Markdown</p><p>:::details Click to see more</p><p>Fusce rutrum venenatis eros in hendrerit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam eget risus egestas, aliquet ipsum sed, volutpat tortor. Proin finibus tortor ac mauris finibus rutrum. Nullam tincidunt arcu eu urna ullamcorper, eu ultricies turpis ornare. Morbi id sollicitudin orci. Proin lobortis vehicula nibh a ornare. Cras sodales eu ligula quis fermentum. Proin eu ultrices leo, quis iaculis justo. Sed dictum, nulla sit amet imperdiet commodo, libero sapien semper justo, ut lobortis elit nunc vitae ante. Nullam lobortis odio quam, ac condimentum elit posuere vitae. Sed ornare, odio et rutrum varius, lorem eros gravida urna, in pharetra sapien justo non magna.</p><ul><li>details content</li><li>details new line</li></ul><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;hello world&#x27;</span>);</span><br></pre></td></tr></table></figure><p>:::</p>]]></content>
     
@@ -94,19 +94,19 @@ Since version 1.5.0, Aurora added custom containers including tip, warning, dang
     
     
     
-    <category term="Linux" scheme="https://www.fomal.cc/categories/Linux/"/>
+    <category term="Linux" scheme="https://www.dyzzy.asia/categories/Linux/"/>
     
     
-    <category term="frpc" scheme="https://www.fomal.cc/tags/frpc/"/>
+    <category term="frpc" scheme="https://www.dyzzy.asia/tags/frpc/"/>
     
-    <category term="Linux" scheme="https://www.fomal.cc/tags/Linux/"/>
+    <category term="Linux" scheme="https://www.dyzzy.asia/tags/Linux/"/>
     
   </entry>
   
   <entry>
     <title>Markdown语法与外挂标签写法汇总</title>
-    <link href="https://www.fomal.cc/posts/2013454d.html"/>
-    <id>https://www.fomal.cc/posts/2013454d.html</id>
+    <link href="https://www.dyzzy.asia/posts/2013454d.html"/>
+    <id>https://www.dyzzy.asia/posts/2013454d.html</id>
     <published>2022-08-09T10:19:03.000Z</published>
     <updated>2022-10-23T14:00:00.000Z</updated>
     
@@ -117,12 +117,12 @@ Since version 1.5.0, Aurora added custom containers including tip, warning, dang
     
     
     
-    <category term="演示" scheme="https://www.fomal.cc/categories/%E6%BC%94%E7%A4%BA/"/>
+    <category term="演示" scheme="https://www.dyzzy.asia/categories/%E6%BC%94%E7%A4%BA/"/>
     
     
-    <category term="Markdown" scheme="https://www.fomal.cc/tags/Markdown/"/>
+    <category term="Markdown" scheme="https://www.dyzzy.asia/tags/Markdown/"/>
     
-    <category term="外挂标签" scheme="https://www.fomal.cc/tags/%E5%A4%96%E6%8C%82%E6%A0%87%E7%AD%BE/"/>
+    <category term="外挂标签" scheme="https://www.dyzzy.asia/tags/%E5%A4%96%E6%8C%82%E6%A0%87%E7%AD%BE/"/>
     
   </entry>
   
