@@ -2714,70 +2714,70 @@ class Cursor {
 //----------------------------------------------------------------
 
 /* 新年倒计时 start */
-// let newYearTimer = null;
-// var newYear = () => {
-//   clearTimeout(newYearTimer);
-//   if (!document.querySelector('#newYear')) return;
-//   // 新年时间戳 and 星期对象
-//   let newYear = new Date('2023-01-22 00:00:00').getTime() / 1000,
-//     week = { 0: '周日', 1: '周一', 2: '周二', 3: '周三', 4: '周四', 5: '周五', 6: '周六' }
+let newYearTimer = null;
+var newYear = () => {
+  clearTimeout(newYearTimer);
+  if (!document.querySelector('#newYear')) return;
+  // 新年时间戳 and 星期对象
+  let newYear = new Date('2023-01-22 00:00:00').getTime() / 1000,
+    week = { 0: '周日', 1: '周一', 2: '周二', 3: '周三', 4: '周四', 5: '周五', 6: '周六' }
 
-//   time();
+  time();
 
-//   // 补零函数
-//   function nol(h) { return h > 9 ? h : '0' + h; };
+  // 补零函数
+  function nol(h) { return h > 9 ? h : '0' + h; };
 
-//   function time() {
-//     // 现在 时间对象
-//     let now = new Date();
+  function time() {
+    // 现在 时间对象
+    let now = new Date();
 
-//     // 右下角 今天
-//     document.querySelector('#newYear .today').innerHTML = now.getFullYear() + '-' + (now.getMonth() + 1) + '-' + now.getDate() + ' ' + week[now.getDay()]
+    // 右下角 今天
+    document.querySelector('#newYear .today').innerHTML = now.getFullYear() + '-' + (now.getMonth() + 1) + '-' + now.getDate() + ' ' + week[now.getDay()]
 
-//     // 现在与新年相差秒数
-//     let second = newYear - Math.round(now.getTime() / 1000);
+    // 现在与新年相差秒数
+    let second = newYear - Math.round(now.getTime() / 1000);
 
-//     // 小于0则表示已经过年
-//     if (second < 0) {
-//       document.querySelector('#newYear .title').innerHTML = 'Happy New Year!';
-//       document.querySelector('#newYear .newYear-time').innerHTML = '<span class="happyNewYear">新年快乐</p>';
-//     } else {
-//       // 大于0则还未过年
-//       document.querySelector('#newYear .title').innerHTML = '距离2023年春节：'
+    // 小于0则表示已经过年
+    if (second < 0) {
+      document.querySelector('#newYear .title').innerHTML = 'Happy New Year!';
+      document.querySelector('#newYear .newYear-time').innerHTML = '<span class="happyNewYear">新年快乐</p>';
+    } else {
+      // 大于0则还未过年
+      document.querySelector('#newYear .title').innerHTML = '距离2023年春节：'
 
-//       // 大于一天则直接渲染天数
-//       if (second > 86400) {
-//         document.querySelector('#newYear .newYear-time').innerHTML = `<span class="day">${Math.ceil(second / 86400)}<span class="unit">天</span></span>`
-//       } else {
-//         // 小于一天则使用时分秒计时。
-//         let h = nol(parseInt(second / 3600));
-//         second %= 3600;
-//         let m = nol(parseInt(second / 60));
-//         second %= 60;
-//         let s = nol(second);
-//         document.querySelector('#newYear .newYear-time').innerHTML = `<span class="time">${h}:${m}:${s}</span></span>`;
-//         // 计时
-//         newYearTimer = setTimeout(time, 1000);
-//       }
-//     }
-//   }
+      // 大于一天则直接渲染天数
+      if (second > 86400) {
+        document.querySelector('#newYear .newYear-time').innerHTML = `<span class="day">${Math.ceil(second / 86400)}<span class="unit">天</span></span>`
+      } else {
+        // 小于一天则使用时分秒计时。
+        let h = nol(parseInt(second / 3600));
+        second %= 3600;
+        let m = nol(parseInt(second / 60));
+        second %= 60;
+        let s = nol(second);
+        document.querySelector('#newYear .newYear-time').innerHTML = `<span class="time">${h}:${m}:${s}</span></span>`;
+        // 计时
+        newYearTimer = setTimeout(time, 1000);
+      }
+    }
+  }
 
-//   // 元宝飘落
-//   jQuery(document).ready(function ($) {
-//     $('#newYear').wpSuperSnow({
-//       flakes: ['https://tuchuang.voooe.cn/images/2023/01/02/yb1.webp', 'https://tuchuang.voooe.cn/images/2023/01/02/yb2.webp', 'https://tuchuang.voooe.cn/images/2023/01/02/yb3.webp'],
-//       totalFlakes: '100',
-//       zIndex: '999999',
-//       maxSize: '30',
-//       maxDuration: '20',
-//       useFlakeTrans: false
-//     });
-//   });
-// }
+  // 元宝飘落
+  jQuery(document).ready(function ($) {
+    $('#newYear').wpSuperSnow({
+      flakes: ['https://tuchuang.voooe.cn/images/2023/01/02/yb1.webp', 'https://tuchuang.voooe.cn/images/2023/01/02/yb2.webp', 'https://tuchuang.voooe.cn/images/2023/01/02/yb3.webp'],
+      totalFlakes: '100',
+      zIndex: '999999',
+      maxSize: '30',
+      maxDuration: '20',
+      useFlakeTrans: false
+    });
+  });
+}
 // // Pjax适配：若没有开启Pjax这里直接是newYear()即可
 // // 开了Pjax的用以下两句
-// document.addEventListener('pjax:complete', newYear);
-// document.addEventListener('DOMContentLoaded', newYear);
+document.addEventListener('pjax:complete', newYear);
+document.addEventListener('DOMContentLoaded', newYear);
 
 /* 新年倒计时 end */
 
@@ -2788,11 +2788,11 @@ var now = new Date();
 function createtime() {
   // 当前时间
   now.setTime(now.getTime() + 1000);
-  var start = new Date("08/01/2022 00:00:00"); // 旅行者1号开始计算的时间
+  var start = new Date("09/05/1977 00:00:00"); // 旅行者1号开始计算的时间
   var dis = Math.trunc(23400000000 + ((now - start) / 1000) * 17); // 距离=秒数*速度 记住转换毫秒
   var unit = (dis / 149600000).toFixed(6);  // 天文单位
   // 网站诞生时间
-  var grt = new Date("09/12/2023 00:00:00");
+  var grt = new Date("12/02/2023 00:00:00");
   var days = (now - grt) / 1e3 / 60 / 60 / 24,
     dnum = Math.floor(days),
     hours = (now - grt) / 1e3 / 60 / 60 - 24 * dnum,
@@ -2807,8 +2807,8 @@ function createtime() {
   let currentTimeHtml = "";
   (currentTimeHtml =
     hnum < 18 && hnum >= 9
-      ? `<img class='boardsign' src='img.dyzzy.asia/svg/下雪.svg' title='鬼天气真的冷！'><br> <div style="font-size:13px;font-weight:bold">本站居然运行了 ${dnum} 天 ${hnum} 小时 ${mnum} 分 ${snum} 秒 <i id="heartbeat" class='fas fa-heartbeat'></i> <br> 旅行者 1 号当前距离地球 ${dis} 千米，约为 ${unit} 个天文单位 🚀</div>`
-      : `<img class='boardsign' src='img.dyzzy.asia/svg/下雪.svg' title='鬼天气真的冷！'><br> <div style="font-size:13px;font-weight:bold">本站居然运行了 ${dnum} 天 ${hnum} 小时 ${mnum} 分 ${snum} 秒 <i id="heartbeat" class='fas fa-heartbeat'></i> <br> 旅行者 1 号当前距离地球 ${dis} 千米，约为 ${unit} 个天文单位 🚀</div>`),
+      ? `<img class='boardsign' src='https://img.dyzzy.asia/svg/下雪.svg' title='鬼天气真的冷！'><br> <div style="font-size:12px;font-weight:bold">本站居然运行了 ${dnum} 天 ${hnum} 小时 ${mnum} 分 ${snum} 秒 <i id="heartbeat" class='fas fa-heartbeat'></i> <br> 旅行者 1 号当前距离地球 ${dis} 千米，约为 ${unit} 个天文单位 🚀</div>`
+      : `<img class='boardsign' src='https://img.dyzzy.asia/svg/下雪.svg' title='鬼天气真的冷！'><br> <div style="font-size:12px;font-weight:bold">本站居然运行了 ${dnum} 天 ${hnum} 小时 ${mnum} 分 ${snum} 秒 <i id="heartbeat" class='fas fa-heartbeat'></i> <br> 旅行者 1 号当前距离地球 ${dis} 千米，约为 ${unit} 个天文单位 🚀</div>`),
     document.getElementById("workboard") &&
     (document.getElementById("workboard").innerHTML = currentTimeHtml);
 }

@@ -8801,7 +8801,7 @@ span.card-clock-weather {
 #post-info,
 .author-info__name,
 .author-info__description {
-  transition: text-shadow 1s linear !important;
+  transition: text-shadow 2s linear !important;
 }
 
 /* tzy页脚样式 */
