@@ -54,7 +54,7 @@ function tonav() {
     position = scroll;
   });
   //修复没有弄右键菜单的童鞋无法回顶部的问题
-  document.getElementById("page-name").innerText = document.title.split(" | Fomalhaut🥝")[0];
+  document.getElementById("page-name").innerText = document.title.split(" | Kelthezad🥝")[0];
 }
 
 function scrollToTop() {
@@ -1136,7 +1136,7 @@ function createtime1() {
     "小站已经苟活",
     dnum,
     "天啦!",
-    "©2022 By Fomalhaut",
+    "©2022 By Kelthezad",
   ];
 
   setTimeout(
@@ -1175,7 +1175,7 @@ function createtime2() {
   setTimeout(
     console.warn.bind(
       console,
-      "%c ⚡ Powered by Fomalhaut🥝 %c 你正在访问Kelthezad's blog",
+      "%c ⚡ Powered by Kelthezad🥝 %c 你正在访问Kelthezad's blog",
       "color:white; background-color:#f0ad4e",
       ""
     )
@@ -1285,8 +1285,8 @@ function share_() {
   try {
     // 截取标题
     var title = document.title;
-    var subTitle = title.endsWith("| Fomalhaut🥝") ? title.substring(0, title.length - 14) : title;
-    navigator.clipboard.writeText('Fomalhaut🥝的站内分享\n标题：' + subTitle + '\n链接：' + url + '\n欢迎来访！🍭🍭🍭');
+    var subTitle = title.endsWith("| Kelthezad🥝") ? title.substring(0, title.length - 14) : title;
+    navigator.clipboard.writeText('Kelthezad🥝的站内分享\n标题：' + subTitle + '\n链接：' + url + '\n欢迎来访！🍭🍭🍭');
     new Vue({
       data: function () {
         this.$notify({
@@ -2522,9 +2522,9 @@ if (m == 12 && dd == 25) {//圣诞节
     sessionStorage.setItem("isPopupWindow", "1");
   }
 }
-if (m == 8 && dd == 11) {//站长生日
+if (m == 11 && dd == 12) {//站长生日
   if (sessionStorage.getItem("isPopupWindow") != "1") {
-    Swal.fire("祝站长" + (y - 1998).toString() + "岁生日快乐！🥝");
+    Swal.fire("祝站长" + (y - 2001).toString() + "岁生日快乐！🥝");
     sessionStorage.setItem("isPopupWindow", "1");
   }
 }
@@ -2714,70 +2714,70 @@ class Cursor {
 //----------------------------------------------------------------
 
 /* 新年倒计时 start */
-let newYearTimer = null;
-var newYear = () => {
-  clearTimeout(newYearTimer);
-  if (!document.querySelector('#newYear')) return;
-  // 新年时间戳 and 星期对象
-  let newYear = new Date('2023-01-22 00:00:00').getTime() / 1000,
-    week = { 0: '周日', 1: '周一', 2: '周二', 3: '周三', 4: '周四', 5: '周五', 6: '周六' }
+// let newYearTimer = null;
+// var newYear = () => {
+//   clearTimeout(newYearTimer);
+//   if (!document.querySelector('#newYear')) return;
+//   // 新年时间戳 and 星期对象
+//   let newYear = new Date('2023-01-22 00:00:00').getTime() / 1000,
+//     week = { 0: '周日', 1: '周一', 2: '周二', 3: '周三', 4: '周四', 5: '周五', 6: '周六' }
 
-  time();
+//   time();
 
-  // 补零函数
-  function nol(h) { return h > 9 ? h : '0' + h; };
+//   // 补零函数
+//   function nol(h) { return h > 9 ? h : '0' + h; };
 
-  function time() {
-    // 现在 时间对象
-    let now = new Date();
+//   function time() {
+//     // 现在 时间对象
+//     let now = new Date();
 
-    // 右下角 今天
-    document.querySelector('#newYear .today').innerHTML = now.getFullYear() + '-' + (now.getMonth() + 1) + '-' + now.getDate() + ' ' + week[now.getDay()]
+//     // 右下角 今天
+//     document.querySelector('#newYear .today').innerHTML = now.getFullYear() + '-' + (now.getMonth() + 1) + '-' + now.getDate() + ' ' + week[now.getDay()]
 
-    // 现在与新年相差秒数
-    let second = newYear - Math.round(now.getTime() / 1000);
+//     // 现在与新年相差秒数
+//     let second = newYear - Math.round(now.getTime() / 1000);
 
-    // 小于0则表示已经过年
-    if (second < 0) {
-      document.querySelector('#newYear .title').innerHTML = 'Happy New Year!';
-      document.querySelector('#newYear .newYear-time').innerHTML = '<span class="happyNewYear">新年快乐</p>';
-    } else {
-      // 大于0则还未过年
-      document.querySelector('#newYear .title').innerHTML = '距离2023年春节：'
+//     // 小于0则表示已经过年
+//     if (second < 0) {
+//       document.querySelector('#newYear .title').innerHTML = 'Happy New Year!';
+//       document.querySelector('#newYear .newYear-time').innerHTML = '<span class="happyNewYear">新年快乐</p>';
+//     } else {
+//       // 大于0则还未过年
+//       document.querySelector('#newYear .title').innerHTML = '距离2024年春节：'
 
-      // 大于一天则直接渲染天数
-      if (second > 86400) {
-        document.querySelector('#newYear .newYear-time').innerHTML = `<span class="day">${Math.ceil(second / 86400)}<span class="unit">天</span></span>`
-      } else {
-        // 小于一天则使用时分秒计时。
-        let h = nol(parseInt(second / 3600));
-        second %= 3600;
-        let m = nol(parseInt(second / 60));
-        second %= 60;
-        let s = nol(second);
-        document.querySelector('#newYear .newYear-time').innerHTML = `<span class="time">${h}:${m}:${s}</span></span>`;
-        // 计时
-        newYearTimer = setTimeout(time, 1000);
-      }
-    }
-  }
+//       // 大于一天则直接渲染天数
+//       if (second > 86400) {
+//         document.querySelector('#newYear .newYear-time').innerHTML = `<span class="day">${Math.ceil(second / 86400)}<span class="unit">天</span></span>`
+//       } else {
+//         // 小于一天则使用时分秒计时。
+//         let h = nol(parseInt(second / 3600));
+//         second %= 3600;
+//         let m = nol(parseInt(second / 60));
+//         second %= 60;
+//         let s = nol(second);
+//         document.querySelector('#newYear .newYear-time').innerHTML = `<span class="time">${h}:${m}:${s}</span></span>`;
+//         // 计时
+//         newYearTimer = setTimeout(time, 1000);
+//       }
+//     }
+//   }
 
-  // 元宝飘落
-  jQuery(document).ready(function ($) {
-    $('#newYear').wpSuperSnow({
-      flakes: ['https://tuchuang.voooe.cn/images/2023/01/02/yb1.webp', 'https://tuchuang.voooe.cn/images/2023/01/02/yb2.webp', 'https://tuchuang.voooe.cn/images/2023/01/02/yb3.webp'],
-      totalFlakes: '100',
-      zIndex: '999999',
-      maxSize: '30',
-      maxDuration: '20',
-      useFlakeTrans: false
-    });
-  });
-}
-// // Pjax适配：若没有开启Pjax这里直接是newYear()即可
-// // 开了Pjax的用以下两句
-document.addEventListener('pjax:complete', newYear);
-document.addEventListener('DOMContentLoaded', newYear);
+//   // 元宝飘落
+//   jQuery(document).ready(function ($) {
+//     $('#newYear').wpSuperSnow({
+//       flakes: ['https://tuchuang.voooe.cn/images/2023/01/02/yb1.webp', 'https://tuchuang.voooe.cn/images/2023/01/02/yb2.webp', 'https://tuchuang.voooe.cn/images/2023/01/02/yb3.webp'],
+//       totalFlakes: '100',
+//       zIndex: '999999',
+//       maxSize: '30',
+//       maxDuration: '20',
+//       useFlakeTrans: false
+//     });
+//   });
+// }
+// // // Pjax适配：若没有开启Pjax这里直接是newYear()即可
+// // // 开了Pjax的用以下两句
+// document.addEventListener('pjax:complete', newYear);
+// document.addEventListener('DOMContentLoaded', newYear);
 
 /* 新年倒计时 end */
 
@@ -3410,7 +3410,7 @@ function createWinbox() {
 <h3>1. 二次元</h3>
 <details class="folding-tag" cyan><summary> 查看二次元背景 </summary>
               <div class='content'>
-              <div class="bgbox"><a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://lskypro.acozycotage.net/Fomalhaut/img/home_bg.webp)" class="imgbox" onclick="changeBg('url(https://lskypro.acozycotage.net/Fomalhaut/img/home_bg.webp)')"></a></div>
+              <div class="bgbox"><a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://lskypro.acozycotage.net/Kelthezad/img/home_bg.webp)" class="imgbox" onclick="changeBg('url(https://lskypro.acozycotage.net/Kelthezad/img/home_bg.webp)')"></a></div>
               </div>
             </details>
 
@@ -3419,7 +3419,7 @@ function createWinbox() {
 
 <details class="folding-tag" cyan><summary> 查看风景背景 </summary>
               <div class='content'>
-              <div class="bgbox"><a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://lskypro.acozycotage.net/Fomalhaut/img/fj1.webp)" class="imgbox" onclick="changeBg('url(https://lskypro.acozycotage.net/Fomalhaut/img/fj1.webp)')"></a></div>
+              <div class="bgbox"><a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://lskypro.acozycotage.net/Kelthezad/img/fj1.webp)" class="imgbox" onclick="changeBg('url(https://lskypro.acozycotage.net/Kelthezad/img/fj1.webp)')"></a></div>
               </div>
             </details>
 
@@ -3427,7 +3427,7 @@ function createWinbox() {
 
 <details class="folding-tag" cyan><summary> 查看萌宠背景 </summary>
               <div class='content'>
-              <div class="bgbox"><a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://lskypro.acozycotage.net/Fomalhaut/img/mc1.webp)" class="imgbox" onclick="changeBg('url(https://lskypro.acozycotage.net/Fomalhaut/img/mc1.webp)')"></a></div>
+              <div class="bgbox"><a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://lskypro.acozycotage.net/Kelthezad/img/mc1.webp)" class="imgbox" onclick="changeBg('url(https://lskypro.acozycotage.net/Kelthezad/img/mc1.webp)')"></a></div>
               </div>
             </details>
 
@@ -3451,7 +3451,7 @@ function createWinbox() {
 <h3>6. 适配手机</h3>
 <details class="folding-tag" cyan><summary> 查看适配手机的背景 </summary>
               <div class='content'>
-              <div class="bgbox"><a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://lskypro.acozycotage.net/Fomalhaut/img/mb4.webp)" class="pimgbox" onclick="changeBg('url(https://lskypro.acozycotage.net/Fomalhaut/img/mb4.webp)')"></a></div>
+              <div class="bgbox"><a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://lskypro.acozycotage.net/Kelthezad/img/mb4.webp)" class="pimgbox" onclick="changeBg('url(https://lskypro.acozycotage.net/Kelthezad/img/mb4.webp)')"></a></div>
               </div>
             </details>
 
