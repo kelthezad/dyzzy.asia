@@ -7707,13 +7707,13 @@ button#go-up:hover #percent {
 
 /* 个人信息卡片背景图 */
 [data-theme="light"] #aside-content > .card-widget.card-info {
-  background-image: url(https://tuchuang.voooe.cn/images/2023/02/28/springBg.png);
+  background-image: url(https://img.dyzzy.asia/img/touxiangbgbt.jpg);
   background-repeat: no-repeat;
   background-attachment: inherit;
   background-size: 100%;
 }
 [data-theme="dark"] #aside-content > .card-widget.card-info {
-  background-image: url(https://tuchuang.voooe.cn/images/2023/02/28/aurora.webp);
+  background-image: url(https://img.dyzzy.asia/img/touxiangbgyj.jpg);
   background-repeat: no-repeat;
   background-attachment: inherit;
   background-size: 100%;
@@ -7727,24 +7727,24 @@ button#go-up:hover #percent {
 }
 @keyframes huxi_light {
   0% {
-    box-shadow: 0px 0px 1px 1px #9ff2d2;
+    box-shadow: 0px 0px 1px 1px #af92fd;
   }
   50% {
-    box-shadow: 0px 0px 5px 5px #9ff2d2;
+    box-shadow: 0px 0px 5px 5px #af92fd;
   }
   100% {
-    box-shadow: 0px 0px 1px 1px #9ff2d2;
+    box-shadow: 0px 0px 1px 1px #af92fd;
   }
 }
 @keyframes huxi_dark {
   0% {
-    box-shadow: 0px 0px 1px 1px #39c5bb;
+    box-shadow: 0px 0px 1px 1px #5731fd;
   }
   50% {
-    box-shadow: 0px 0px 5px 5px #39c5bb;
+    box-shadow: 0px 0px 5px 5px #5731fd;
   }
   100% {
-    box-shadow: 0px 0px 1px 1px #39c5bb;
+    box-shadow: 0px 0px 1px 1px #5731fd;
   }
 }
 
@@ -9274,10 +9274,10 @@ figure.highlight pre .deletion {
 }
 
 /* 信息卡片彩带 */
-/* .author_top:hover {
+.author_top:hover {
   background: url(https://tuchuang.voooe.cn/images/2023/01/02/snow.gif);
   background-size: cover;
-} */
+}
 
 /* 霓虹灯css实现 light_15px 10s linear infinite */
 [data-theme="light"] #site-name,
