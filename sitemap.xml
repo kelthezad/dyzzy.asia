@@ -2,27 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://www.dyzzy.asia/box/gallery/photo/index.html</loc>
+    <loc>https://www.dyzzy.asia/tags/index.html</loc>
     
-    <lastmod>2023-12-19</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.dyzzy.asia/box/gallery/index.html</loc>
-    
-    <lastmod>2023-12-19</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.dyzzy.asia/dailyPhoto/index.html</loc>
-    
-    <lastmod>2023-12-19</lastmod>
+    <lastmod>2023-12-27</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -31,70 +13,7 @@
   <url>
     <loc>https://www.dyzzy.asia/wordScenery/index.html</loc>
     
-    <lastmod>2023-12-19</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.dyzzy.asia/posts/a3ce0d8f.html</loc>
-    
-    <lastmod>2023-12-18</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.dyzzy.asia/posts/a70faca0.html</loc>
-    
-    <lastmod>2023-12-18</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.dyzzy.asia/posts/d2be335e.html</loc>
-    
-    <lastmod>2023-12-18</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.dyzzy.asia/categories/index.html</loc>
-    
-    <lastmod>2023-03-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.dyzzy.asia/tags/index.html</loc>
-    
-    <lastmod>2023-03-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.dyzzy.asia/box/animation/index.html</loc>
-    
-    <lastmod>2023-03-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.dyzzy.asia/box/nav/index.html</loc>
-    
-    <lastmod>2023-03-22</lastmod>
+    <lastmod>2023-12-27</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -103,25 +22,7 @@
   <url>
     <loc>https://www.dyzzy.asia/life/games/index.html</loc>
     
-    <lastmod>2023-03-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.dyzzy.asia/personal/about/index.html</loc>
-    
-    <lastmod>2023-03-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.dyzzy.asia/life/music/index.html</loc>
-    
-    <lastmod>2023-03-22</lastmod>
+    <lastmod>2023-12-27</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -130,16 +31,25 @@
   <url>
     <loc>https://www.dyzzy.asia/life/movies/index.html</loc>
     
-    <lastmod>2023-03-22</lastmod>
+    <lastmod>2023-12-27</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://www.dyzzy.asia/personal/love/index.html</loc>
+    <loc>https://www.dyzzy.asia/life/music/index.html</loc>
     
-    <lastmod>2023-03-22</lastmod>
+    <lastmod>2023-12-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.dyzzy.asia/personal/about/index.html</loc>
+    
+    <lastmod>2023-12-27</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -148,25 +58,16 @@
   <url>
     <loc>https://www.dyzzy.asia/personal/bb/index.html</loc>
     
-    <lastmod>2023-03-22</lastmod>
+    <lastmod>2023-12-27</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://www.dyzzy.asia/site/time/index.html</loc>
+    <loc>https://www.dyzzy.asia/personal/love/index.html</loc>
     
-    <lastmod>2023-03-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.dyzzy.asia/social/fcircle/index.html</loc>
-    
-    <lastmod>2023-03-22</lastmod>
+    <lastmod>2023-12-27</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -175,7 +76,25 @@
   <url>
     <loc>https://www.dyzzy.asia/site/census/index.html</loc>
     
-    <lastmod>2023-03-22</lastmod>
+    <lastmod>2023-12-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.dyzzy.asia/site/time/index.html</loc>
+    
+    <lastmod>2023-12-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.dyzzy.asia/social/fcircle/index.html</loc>
+    
+    <lastmod>2023-12-27</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -184,7 +103,97 @@
   <url>
     <loc>https://www.dyzzy.asia/social/link/index.html</loc>
     
-    <lastmod>2023-03-22</lastmod>
+    <lastmod>2023-12-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.dyzzy.asia/categories/index.html</loc>
+    
+    <lastmod>2023-12-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.dyzzy.asia/box/animation/index.html</loc>
+    
+    <lastmod>2023-12-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.dyzzy.asia/box/gallery/index.html</loc>
+    
+    <lastmod>2023-12-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.dyzzy.asia/box/nav/index.html</loc>
+    
+    <lastmod>2023-12-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.dyzzy.asia/box/gallery/photo/index.html</loc>
+    
+    <lastmod>2023-12-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.dyzzy.asia/posts/0.html</loc>
+    
+    <lastmod>2023-12-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.dyzzy.asia/posts/d2be335e.html</loc>
+    
+    <lastmod>2023-12-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.dyzzy.asia/posts/a70faca0.html</loc>
+    
+    <lastmod>2023-12-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.dyzzy.asia/posts/a3ce0d8f.html</loc>
+    
+    <lastmod>2023-12-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.dyzzy.asia/posts/d87f7e0c.html</loc>
+    
+    <lastmod>2023-12-26</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -211,36 +220,36 @@
 
   <url>
     <loc>https://www.dyzzy.asia/</loc>
-    <lastmod>2023-12-20</lastmod>
+    <lastmod>2023-12-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
   
   <url>
-    <loc>https://www.dyzzy.asia/tags/frpc/</loc>
-    <lastmod>2023-12-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.dyzzy.asia/tags/Linux/</loc>
-    <lastmod>2023-12-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://www.dyzzy.asia/tags/Markdown/</loc>
-    <lastmod>2023-12-20</lastmod>
+    <lastmod>2023-12-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.dyzzy.asia/tags/%E5%A4%96%E6%8C%82%E6%A0%87%E7%AD%BE/</loc>
-    <lastmod>2023-12-20</lastmod>
+    <lastmod>2023-12-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.dyzzy.asia/tags/frpc/</loc>
+    <lastmod>2023-12-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.dyzzy.asia/tags/Linux/</loc>
+    <lastmod>2023-12-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -248,15 +257,15 @@
 
   
   <url>
-    <loc>https://www.dyzzy.asia/categories/Linux/</loc>
-    <lastmod>2023-12-20</lastmod>
+    <loc>https://www.dyzzy.asia/categories/%E6%BC%94%E7%A4%BA/</loc>
+    <lastmod>2023-12-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://www.dyzzy.asia/categories/%E6%BC%94%E7%A4%BA/</loc>
-    <lastmod>2023-12-20</lastmod>
+    <loc>https://www.dyzzy.asia/categories/Linux/</loc>
+    <lastmod>2023-12-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
