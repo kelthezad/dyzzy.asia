@@ -4,11 +4,11 @@
   
     
     <entry>
-      <title></title>
-      <link href="/posts/0.html"/>
-      <url>/posts/0.html</url>
+      <title>赏诗</title>
+      <link href="/posts/c6cd3e9c.html"/>
+      <url>/posts/c6cd3e9c.html</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<figure class="highlight django"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="template-tag">&#123;% <span class="name">poem</span> 水调歌头,苏轼 %&#125;</span><span class="language-xml"></span></span><br><span class="line"><span class="language-xml">丙辰中秋，欢饮达旦，大醉，作此篇，兼怀子由。</span></span><br><span class="line"><span class="language-xml">明月几时有？把酒问青天。</span></span><br><span class="line"><span class="language-xml">不知天上宫阙，今夕是何年？</span></span><br><span class="line"><span class="language-xml">我欲乘风归去，又恐琼楼玉宇，高处不胜寒。</span></span><br><span class="line"><span class="language-xml">起舞弄清影，何似在人间？</span></span><br><span class="line"><span class="language-xml"></span></span><br><span class="line"><span class="language-xml">转朱阁，低绮户，照无眠。</span></span><br><span class="line"><span class="language-xml">不应有恨，何事长向别时圆？</span></span><br><span class="line"><span class="language-xml">人有悲欢离合，月有阴晴圆缺，此事古难全。</span></span><br><span class="line"><span class="language-xml">但愿人长久，千里共婵娟。</span></span><br><span class="line"><span class="language-xml"></span><span class="template-tag">&#123;% <span class="name">endpoem</span> %&#125;</span></span><br></pre></td></tr></table></figure>]]></content>
       
       
       
