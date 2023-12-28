@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>恩施行</title>
+      <link href="/posts/enshi.html"/>
+      <url>/posts/enshi.html</url>
+      
+        <content type="html"><![CDATA[<h1>恩施行</h1><div class="note info flat"><p>原计划于神龙架滑雪，结果因气候原因导致滑雪场久久不能开场，毅然决定更换目的地前往恩施。</p></div><div class="timeline color]"><div class='timeline-item headline'><div class='timeline-item-title'><div class='item-circle'><p>规划 [</p></div></div></div><div class='timeline-item'><div class='timeline-item-title'><div class='item-circle'><p>2023-12-13</p></div></div><div class='timeline-item-content'><p>之前以及定好前往神龙架的动车票，离提高手续费仅剩一小时不到<img no-lazy class="inline" src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-emoji/aru-l/0000.gif" style="height:1.5em"/> ，特种部队火速改签决定前往恩施。<br>开始初步为行程做准备，并购置好各类门票。</p></div></div><div class='timeline-item'><div class='timeline-item-title'><div class='item-circle'><p>2023-12-14</p></div></div><div class='timeline-item-content'><p>特种部队会师，开始向恩施行军。于14:30抵达恩施下榻点。</p></div></div><div class='timeline-item'><div class='timeline-item-title'><div class='item-circle'><p>时间节点（标题）</p></div></div><div class='timeline-item-content'><p>占位</p></div></div><div class='timeline-item'><div class='timeline-item-title'><div class='item-circle'><p>时间节点（标题）</p></div></div><div class='timeline-item-content'><p>占位</p></div></div></div><h2 id="出行计划">出行计划</h2><div class='checkbox'><input type="checkbox" />            <p>前往女儿城</p>            </div><div class='checkbox'><input type="checkbox" />            <p>前往土司城</p>            </div><div class='checkbox'><input type="checkbox" />            <p>前往恩施大峡谷</p>            </div><link rel="stylesheet" href="//unpkg.com/hexo-tag-map/lib/leaflet@1.7.1.css"><script data-pjax src="//unpkg.com/hexo-tag-map/lib/leaflet@1.7.1.js"></script><script data-pjax src="//unpkg.com/hexo-tag-map/lib/leaflet.ChineseTmsProviders@1.0.4.js"></script><div id="geoqMap-109.401101-30.039119" style="max-width:90%; height:320px;display: block;margin:0 auto;z-index:1;border-radius: 5px;"></div><script type="text/javascript">var normalm1=L.tileLayer.chinaProvider('Geoq.Normal.Map',{maxZoom:20,minZoom:1,attribution:'GeoQ'});var normalm2=L.tileLayer.chinaProvider('Geoq.Normal.PurplishBlue',{maxZoom:20,minZoom:1,attribution:'GeoQ'});var normalm3=L.tileLayer.chinaProvider('Geoq.Normal.Gray',{maxZoom:20,minZoom:1,attribution:'GeoQ'});var normalm4=L.tileLayer.chinaProvider('Geoq.Normal.Warm',{maxZoom:20,minZoom:1,attribution:'GeoQ'});var normalm5=L.tileLayer.chinaProvider('Geoq.Theme.Hydro',{maxZoom:20,minZoom:1,attribution:'GeoQ'});var normal=L.layerGroup([normalm1,normalm2,normalm3,normalm4,normalm5]);var baseLayers={"智图地图":normalm1,"午夜蓝":normalm2,"灰色":normalm3,"暖色":normalm4,"水系":normalm5};var mymap=L.map("geoqMap-109.401101-30.039119",{center:[30.039119,109.401101],zoom:13,layers:[normalm3],zoomControl:false});L.control.layers(baseLayers,null).addTo(mymap);L.control.zoom({zoomInTitle:'放大',zoomOutTitle:'缩小'}).addTo(mymap);var marker = L.marker(['30.039119','109.401101']).addTo(mymap);marker.bindPopup("恩施我来了！").openPopup();</script><div class="gallery-group-main">  <figure class="gallery-group">  <img class="gallery-group-img no-lightbox" src='https://cdn.cbd.int/akilar-candyassets@1.0.36/image/1.jpg' alt="Group Image Gallery">  <figcaption>  <div class="gallery-group-name">恩施照片</div>  <p>相册占位</p>  <a href='/gallery/MC/'></a>  </figcaption>  </figure>    <figure class="gallery-group">  <img class="gallery-group-img no-lightbox" src='https://cdn.cbd.int/akilar-candyassets@1.0.36/image/20200907110508327.png' alt="Group Image Gallery">  <figcaption>  <div class="gallery-group-name">恩施照片</div>  <p>相册占位</p>  <a href='/gallery/Gundam/'></a>  </figcaption>  </figure>  </div>]]></content>
+      
+      
+      <categories>
+          
+          <category> 旅游 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 旅游 </tag>
+            
+            <tag> 恩施 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Hexo使用 Github Action 自动部署</title>
       <link href="/posts/action.html"/>
       <url>/posts/action.html</url>
